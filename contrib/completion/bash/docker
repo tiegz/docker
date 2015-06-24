@@ -808,7 +808,7 @@ _docker_run() {
 		--mac-address
 		--memory -m
 		--memory-swap
-		--name
+		--name -n
 		--net
 		--pid
 		--publish -p

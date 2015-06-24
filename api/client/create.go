@@ -139,7 +139,7 @@ func (cli *DockerCli) CmdCreate(args ...string) error {
 
 	// These are flags not stored in Config/HostConfig
 	var (
-		flName = cmd.String([]string{"-name"}, "", "Assign a name to the container")
+		flName = cmd.String([]string{"n", "-name"}, "", "Assign a name to the container")
 	)
 
 	config, hostConfig, cmd, err := runconfig.Parse(cmd, args)

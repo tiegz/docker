@@ -45,7 +45,7 @@ func (cli *DockerCli) CmdRun(args ...string) error {
 		flAutoRemove = cmd.Bool([]string{"-rm"}, false, "Automatically remove the container when it exits")
 		flDetach     = cmd.Bool([]string{"d", "-detach"}, false, "Run container in background and print container ID")
 		flSigProxy   = cmd.Bool([]string{"-sig-proxy"}, true, "Proxy received signals to the process")
-		flName       = cmd.String([]string{"-name"}, "", "Assign a name to the container")
+		flName       = cmd.String([]string{"n", "-name"}, "", "Assign a name to the container")
 		flAttach     *opts.ListOpts
 
 		ErrConflictAttachDetach               = fmt.Errorf("Conflicting options: -a and -d")
